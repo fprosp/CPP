@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mylib.h"
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 class contact
 {
@@ -42,3 +43,5 @@ class contact
 		std::string 	show_darkeset_secret() {
 			return(darkeset_secret); }
 };
+
+#endif

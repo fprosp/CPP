@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/mylib.h"
+#include "../include/phonebook.hpp"
 
-void	show_index_info(PhoneBook *pb)
+void	show_index_info(phonebook *pb)
 {
 	int i;
 
@@ -49,7 +49,7 @@ void	get_format(std::string str)
 	return ;
 }
 
-void	show_farmacted_contact(PhoneBook *pb)
+void	show_farmacted_contact(phonebook *pb)
 {
 	int i;
 
@@ -67,7 +67,7 @@ void	show_farmacted_contact(PhoneBook *pb)
 	return ;
 }
 
-void	show_search(PhoneBook *pb)
+void	show_search(phonebook *pb)
 {
 	std::string str;
 

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/mylib.h"
+#include "../include/phonebook.hpp"
 
 std::string		get_full_input()
 {
@@ -26,7 +26,7 @@ std::string		get_full_input()
 	return (tmp);
 }
 
-void	save_contacts(PhoneBook *pb)
+void	save_contacts(phonebook *pb)
 {
 	std::cout << "\nSet name: ";
 	pb->contact[pb->i].set_name(get_full_input());
