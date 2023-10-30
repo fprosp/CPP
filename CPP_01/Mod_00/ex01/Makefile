@@ -6,11 +6,11 @@
 #    By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/20 16:57:53 by fprosper          #+#    #+#              #
-#    Updated: 2023/10/05 19:40:27 by fprosper         ###   ########.fr        #
+#    Updated: 2023/10/30 19:58:20 by fprosper         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	phonebook
+NAME			=	Phonebook
 
 MAIN			=	main.cpp
 SRCS			=	./src/show_search.cpp ./src/save_contacts.cpp 

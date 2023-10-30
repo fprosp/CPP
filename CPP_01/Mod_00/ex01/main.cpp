@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 16:53:20 by fprosper          #+#    #+#             */
-/*   Updated: 2023/10/12 19:39:03 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/10/30 19:41:22 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	welcome_message()
 
 int main(void)
 {	
-	PhoneBook pb;
+	phonebook pb;
 	std::string cmd;
 
 	welcome_message();
