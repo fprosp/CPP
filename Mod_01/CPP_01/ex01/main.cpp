@@ -14,6 +14,6 @@
 
 int main(void)
 {   
-    Zombie *orda = zombieHorde(5, "Zombie" );
+    Zombie *orda = zombieHorde(5, "Zombie");
     return (0);
 }

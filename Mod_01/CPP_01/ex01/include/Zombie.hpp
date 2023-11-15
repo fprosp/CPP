@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 18:39:06 by fprosper          #+#    #+#             */
-/*   Updated: 2023/11/15 17:03:13 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:48:17 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,17 @@
 class Zombie 
 {
     private:
-        std::string zombie_Name;
+        std::string zName;
 
     public:
         void announce();
+        void setName(std::string nName);
+        
         Zombie (std::string zombie_Name);
         ~Zombie ();
 };
 
-Zombie* newZombie( std::string zombie_Name );
+Zombie* newZombie(std::string zombie_Name);
 Zombie	*zombieHorde(int n, std::string zombie_Name);
 
 #endif

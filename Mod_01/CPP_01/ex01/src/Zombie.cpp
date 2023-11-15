@@ -6,22 +6,27 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 14:09:52 by fprosper          #+#    #+#             */
-/*   Updated: 2023/11/15 17:07:02 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:48:29 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Zombie.hpp"
 
-Zombie::Zombie(std::string zombie_Name):zombie_Name(zombie_Name)
+Zombie::Zombie()
 {
 }
 
 Zombie::~Zombie()
 {
-    std::cout<< zombie_Name + " was destroyed!"<< std::endl;   
+    std::cout<< zName + " was destroyed!"<< std::endl;   
 }
 
 void    Zombie::announce()
 {
-    std::cout<< zombie_Name + ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout<< zName + ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void    setName(std::string nName)
+{
+    zName = nName;
 }
