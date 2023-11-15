@@ -6,24 +6,22 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 14:09:52 by fprosper          #+#    #+#             */
-/*   Updated: 2023/11/15 15:53:32 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:07:02 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Zombie.hpp"
 
-// Inizializzazione degli attributi riferiti all'oggetto
-
-Zombie::Zombie(std::string name):Name(name)
+Zombie::Zombie(std::string zombie_Name):zombie_Name(zombie_Name)
 {
 }
 
 Zombie::~Zombie()
 {
-    std::cout<< Name + " was destroyed!"<< std::endl;   
+    std::cout<< zombie_Name + " was destroyed!"<< std::endl;   
 }
 
 void    Zombie::announce()
 {
-    std::cout<< Name + ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout<< zombie_Name + ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

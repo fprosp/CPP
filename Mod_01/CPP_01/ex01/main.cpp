@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 16:19:33 by fprosper          #+#    #+#             */
-/*   Updated: 2023/11/15 16:31:53 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:10:55 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int main(void)
 {   
-    Zombie *orde = zombieHorde(5, "Zombie" );
+    Zombie *orda = zombieHorde(5, "Zombie" );
     return (0);
 }
