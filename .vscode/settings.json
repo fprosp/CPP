@@ -124,6 +124,7 @@
     "type_traits": "cpp",
     "utility": "cpp",
     "fstream": "cpp",
-    "ranges": "cpp"
+    "ranges": "cpp",
+    "iomanip": "cpp"
   }
 }

@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 19:29:09 by fprosper          #+#    #+#             */
-/*   Updated: 2023/11/21 20:10:09 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:20:22 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ class Weapon
         std::string type;
 
     public:
-        void getType();
+        Weapon(std::string type_name);
+        ~Weapon();
+        void                setType(std::string newtype);
+        const std::string	&getType();
 
 };
-
-
-
 
 #endif

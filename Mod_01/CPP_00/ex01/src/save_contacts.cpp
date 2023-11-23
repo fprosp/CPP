@@ -6,11 +6,13 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:41:08 by fprosper          #+#    #+#             */
-/*   Updated: 2023/10/12 19:37:11 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/11/22 15:02:40 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/phonebook.hpp"
+#include "../include/contact.hpp"
+
 
 std::string		get_full_input()
 {

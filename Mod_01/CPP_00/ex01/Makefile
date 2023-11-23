@@ -6,14 +6,14 @@
 #    By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/20 16:57:53 by fprosper          #+#    #+#              #
-#    Updated: 2023/11/21 18:59:53 by fprosper         ###   ########.fr        #
+#    Updated: 2023/11/22 15:02:05 by fprosper         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	Phonebook
 MAIN			=	main.cpp
 
-SRC				=	./src/show_search.cpp ./src/save_contacts.cpp
+SRC				=	./src/show_search.cpp ./src/save_contacts.cpp ./src/contact.cpp
 OBJS			=	$(SRC:.cpp=.o)
 
 CC				=	c++
