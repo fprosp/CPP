@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 19:29:22 by fprosper          #+#    #+#             */
-/*   Updated: 2023/11/27 17:11:09 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/11/27 17:35:28 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void    Weapon::setType(std::string type_name)
 
 const std::string	&Weapon::getType()
 {
-    return (_type);
+    return (_type_name);
 }

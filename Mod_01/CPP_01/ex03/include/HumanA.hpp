@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 19:29:14 by fprosper          #+#    #+#             */
-/*   Updated: 2023/11/27 16:53:44 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/11/27 17:39:03 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class HumanA
 {
     private: 
         std::string _name;
-        Weapon     *_weapon_type;
+        Weapon     &_weapon_type;
         
     public:
         void attack();
