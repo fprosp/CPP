@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 19:29:09 by fprosper          #+#    #+#             */
-/*   Updated: 2023/11/27 17:01:49 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/11/28 18:26:49 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Weapon
 {
     private: 
-        std::string _type_name;
+        std::string _type;
 
     public:
         Weapon(std::string type_name);

@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 19:29:11 by fprosper          #+#    #+#             */
-/*   Updated: 2023/11/27 16:53:49 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/11/28 18:26:43 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ class HumanB
 {
     private:
         std::string _name;
-        Weapon     *_weapon_type;
+        Weapon     *_weapon;
 
     public:
         void attack();
-        void setWeapon(Weapon &weapon_type);
+        void setWeapon(Weapon &weapon);
         
         HumanB(std::string humanName);
         ~HumanB();
