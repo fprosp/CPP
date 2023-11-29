@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/fprosper/Library/CloudStorage/Dropbox/42_corsus/CPP/CPP_01/Mod_00/ex01",
-      "program": "/Users/fprosper/Library/CloudStorage/Dropbox/42_corsus/CPP/CPP_01/Mod_00/ex01/build/Debug/outDebug"
+      "cwd": "/Users/fprosper/Library/CloudStorage/Dropbox/42_corsus/CPP/CPP/Mod_01/CPP_01/ex04",
+      "program": "/Users/fprosper/Library/CloudStorage/Dropbox/42_corsus/CPP/CPP/Mod_01/CPP_01/ex04/build/Debug/outDebug"
     }
   ]
 }

@@ -6,11 +6,11 @@
 #    By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/21 17:09:02 by fprosper          #+#    #+#              #
-#    Updated: 2023/11/21 19:00:14 by fprosper         ###   ########.fr        #
+#    Updated: 2023/11/29 19:24:21 by fprosper         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	brain
+NAME			=	swap
 MAIN			=	main.cpp
 
 CC				=	c++
