@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ciao.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -9,11 +9,9 @@
 /*   Updated: 2023/12/04 15:14:42 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <iostream>
 #include <string>
 #include <fstream>
-
 std::string	substitute(std::string str, std::string s1, std::string s2)
 {
 	while (str.find(s1) != std::string::npos)
@@ -24,8 +22,7 @@ std::string	substitute(std::string str, std::string s1, std::string s2)
 	}
 	return (str);
 }
-
-int	main(int ac, char **av)
+int	ciao(int ac, char **av)
 {
 	if (ac != 4)
 		std::cout << "Invalid number of arguments." << std::endl;

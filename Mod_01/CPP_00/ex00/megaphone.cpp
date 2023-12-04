@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 15:14:22 by fprosper          #+#    #+#             */
-/*   Updated: 2023/09/28 19:59:07 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/12/04 15:48:06 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ int main(int argc, char **argv)
 		}
 	}
 	std::cout << std::endl;
-	return (EXIT_SUCCESS);	
+	return (0);	
 }

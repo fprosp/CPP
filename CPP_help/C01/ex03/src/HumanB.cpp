@@ -6,14 +6,14 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:21:29 by arecce            #+#    #+#             */
-/*   Updated: 2023/11/27 16:30:38 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/12/04 15:14:57 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/HumanB.hpp"
 #include <iostream>
 
-HumanB::HumanB(std::string name):_name(name)
+HumanB::HumanB(std::string name) : _name(name), _weapon(NULL)
 {
 }
 
