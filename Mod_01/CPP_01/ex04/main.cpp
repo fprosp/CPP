@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 18:38:29 by fprosper          #+#    #+#             */
-/*   Updated: 2023/11/29 19:26:23 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/12/04 18:06:36 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string>
 #include <fstream>
 
-std::string	substitute(std::string str, std::string s1, std::string s2)
+std::string	line_editor(std::string str, std::string s1, std::string s2)
 {
 	while (str.find(s1) != std::string::npos)
 	{
@@ -25,32 +25,33 @@ std::string	substitute(std::string str, std::string s1, std::string s2)
 	return (str);
 }
 
-int	main(int ac, char **av)
+int	main(int argc, char **argv)
 {
-	if (ac != 4)
+	if (argc != 4)
 		std::cout << "Invalid number of arguments." << std::endl;
 	else
 	{
-		std::string	myFile;
-		std::string	filename = av[1]; std::string s1 = av[2]; std::string s2 = av[3];
-		std::ifstream	readFile(filename);
-		if (readFile.is_open())
+		std::ifstream	fin(argv[1]);
+		if (fin.is_open())
 		{
-			std::ifstream	readFile(filename);
-			std::ofstream	writeFile(filename + ".replace");
-			std::getline(readFile, myFile);
-			writeFile << substitute(myFile, s1, s2);
-			while (std::getline(readFile, myFile))
+			std::string s1 = argv[2]; 
+			std::string s2 = argv[3];
+			std::string	filename = argv[1];
+			std::ofstream fout(filename + ".replace");
+			std::string	tmp;
+			std::getline(fin, tmp);
+			fout << line_editor(tmp, s1, s2);
+			while (std::getline(fin, tmp))
 			{
-				if (!myFile.empty())
+				if (!tmp.empty())
 				{
-					myFile.insert(0, "\n");
-					writeFile << substitute(myFile, s1, s2);
+					tmp.insert(0, "\n");
+					fout << line_editor(tmp, s1, s2);
 				}
 				
 			}
-			readFile.close();
-			writeFile.close();
+			fin.close();
+			fout.close();
 		}
 		else
 			std::cout << "File not found!" << std::endl;
