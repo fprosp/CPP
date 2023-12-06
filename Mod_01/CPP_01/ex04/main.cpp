@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 18:38:29 by fprosper          #+#    #+#             */
-/*   Updated: 2023/12/04 18:06:36 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/12/06 19:21:30 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@
 
 std::string	line_editor(std::string str, std::string s1, std::string s2)
 {
-	while (str.find(s1) != std::string::npos)
+	std::size_t pos = str.find(s1);
+	while (pos != std::string::npos)
 	{
-		std::size_t pos = str.find(s1);
 		str.erase(pos, s1.length());
 		str.insert(pos, s2);
+		pos += s2.size();
+		pos = str.find(s1, pos);
 	}
 	return (str);
 }
