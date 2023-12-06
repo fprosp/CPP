@@ -6,26 +6,26 @@
 #    By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/21 17:09:02 by fprosper          #+#    #+#              #
-#    Updated: 2023/12/06 17:44:20 by fprosper         ###   ########.fr        #
+#    Updated: 2023/12/06 17:07:40 by fprosper         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	brain
-SRC				=	main.cpp
-OBJ 			=	$(SRC:.cpp=.o)
+NAME			=	harlFilter
+SRC 			= 	main.cpp ./src/Harl.cpp
+OBJS 			= 	$(SRC:.cpp=.o)
 
 CC				=	c++
 RM				=	rm -f
 CFLAGS			=	-Wall -Wextra -Werror -std=c++98
 
-$(NAME):	$(OBJ)
-				$(CC) $(CFLAGS) -o $(NAME) $(SRC)
+$(NAME):		$(OBJS)
+				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 all:			
 				$(CC) $(CFLAGS) -o $(NAME) $(SRC) $(MAIN)
 
 clean:			
-				$(RM) $(OBJ)
+				$(RM) $(OBJS)
 
 fclean:			clean
 				$(RM) $(NAME)

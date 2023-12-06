@@ -6,20 +6,20 @@
 #    By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/21 17:09:02 by fprosper          #+#    #+#              #
-#    Updated: 2023/12/06 17:44:20 by fprosper         ###   ########.fr        #
+#    Updated: 2023/12/06 17:43:14 by fprosper         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	brain
-SRC				=	main.cpp
-OBJ 			=	$(SRC:.cpp=.o)
+NAME			=	harl
+SRC 			= 	main.cpp ./src/harl.cpp
+OBJ 			= 	$(SRC:.cpp=.o)
 
 CC				=	c++
 RM				=	rm -f
 CFLAGS			=	-Wall -Wextra -Werror -std=c++98
 
-$(NAME):	$(OBJ)
-				$(CC) $(CFLAGS) -o $(NAME) $(SRC)
+$(NAME):		$(OBJ)
+				$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 all:			
 				$(CC) $(CFLAGS) -o $(NAME) $(SRC) $(MAIN)
