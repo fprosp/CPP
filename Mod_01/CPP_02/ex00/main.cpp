@@ -5,20 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/13 16:28:36 by arecce            #+#    #+#             */
-/*   Updated: 2023/12/06 16:03:07 by fprosper         ###   ########.fr       */
+/*   Created: 2023/12/13 13:41:22 by fprosper          #+#    #+#             */
+/*   Updated: 2023/12/13 15:11:13 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/Harl.hpp"
+#include "./include/Fixed.hpp"
 
-int	main()
+int main(void)
 {
-	Harl harl;
+    Fixed a;		    //default
+	Fixed b( a );	    //copy constructor
+	Fixed c;		    //default
 
-	harl.complain("DEBUG");
-	harl.complain("INFO");
-	harl.complain("WARNING");
-	harl.complain("ERROR");
-	return (0);
+	c = b;			    //copy assignment
+	
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+    return (0);
 }
