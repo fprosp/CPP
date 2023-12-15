@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/13 14:44:54 by fprosper          #+#    #+#              #
-#    Updated: 2023/12/13 15:05:15 by fprosper         ###   ########.fr        #
+#    Created: 2023/12/15 16:09:49 by fprosper          #+#    #+#              #
+#    Updated: 2023/12/15 16:10:09 by fprosper         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	a.out
+NAME			=	fixed
 SRC 			= 	main.cpp ./src/Fixed.cpp
 OBJS 			= 	$(SRC:.cpp=.o)
 
