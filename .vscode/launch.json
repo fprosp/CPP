@@ -3,22 +3,11 @@
   "configurations": [
     {
       "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
+      "type": "lldb",
       "request": "launch",
       "args": [],
-      "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "/nfs/homes/fprosper/Desktop/CPP1/temporana/Mod_01/CPP_01/ex04",
-      "program": "/nfs/homes/fprosper/Desktop/CPP1/temporana/Mod_01/CPP_01/ex04/build/Debug/outDebug",
-      "MIMode": "lldb",
-      "miDebuggerPath": "lldb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
+      "cwd": "/Users/fprosper/Desktop/CPP/Mod_01/CPP_02/ex01/src",
+      "program": "/Users/fprosper/Desktop/CPP/Mod_01/CPP_02/ex01/src/build/Debug/outDebug"
     }
   ]
 }

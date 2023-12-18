@@ -6,18 +6,29 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:40:05 by fprosper          #+#    #+#             */
-/*   Updated: 2023/12/15 18:40:52 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/12/18 14:54:30 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
-Class ClapTrap 
+#include <string>
+#include <iostream>
+class	ClapTrap
 {
-
-
-
+	private:
+		std::string _Name;
+		int 		_Hit_points;
+		int			_Energy_points;
+		int			_Attack_damage;
+	public:
+		ClapTrap(std::string Name);				// Default constructor 
+		~ClapTrap();							// Default destructor
+		
+		void 	attack(const std::string &target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 };
 
 #endif
