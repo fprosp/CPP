@@ -6,32 +6,31 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 13:50:10 by fprosper          #+#    #+#             */
-/*   Updated: 2023/12/18 15:09:37 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/12/19 19:33:01 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Fixed.hpp"
 
-Fixed::Fixed():_fixed(0)
+Fixed::Fixed():_fixed(0)    // Default costructor
 {
     std::cout << "Default constructor called" << std::endl; 
 }
 
-Fixed::~Fixed()
+Fixed::~Fixed() // Default destructor
 {
     std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &class_name)                //copy constructor
+Fixed::Fixed(const Fixed &className):_fixed(className._fixed)   // Copy constructor
 {                   
     std::cout << "Copy constructor called" << std::endl;
-    _fixed = class_name._fixed;
 }
 
-Fixed &Fixed::operator=(const Fixed &class_name)
+Fixed &Fixed::operator=(const Fixed &className) // Copy assigment operator overload
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    _fixed = class_name._fixed;
+    _fixed = className._fixed;
     return (*this);
 }
 

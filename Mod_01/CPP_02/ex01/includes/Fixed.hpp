@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:14:53 by arecce            #+#    #+#             */
-/*   Updated: 2023/12/15 16:11:50 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/12/19 19:07:56 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,13 @@ class Fixed
 		static const int	Bits = 8;
 
 	public:
+		Fixed();								// Default costructor
+		Fixed(const int value);					// Custom costructor
+		Fixed(const float value);				// Custom costructor
+		~Fixed();								// Default destructor
+		Fixed(const Fixed &original); 			// Copy Constructor
+		Fixed &operator=(const Fixed &assign);	// Copy assignment operator overload
 
-		Fixed();
-		Fixed(const int value);
-		Fixed(const float value);
-		~Fixed();
-		Fixed(const Fixed &original); // Copy Constructor
-		
-		Fixed &operator=(const Fixed &assign); // Copy Assignment
-	
-	
 		int		getRawBits() const;
 		void	setRawBits(int const raw);
 		float	toFloat() const;

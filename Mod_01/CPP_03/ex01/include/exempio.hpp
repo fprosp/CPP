@@ -65,7 +65,7 @@ namespace Geometry
 	class Polygon;
 }
 
-class Geometry::Polygon : public Shape // Eredita la componente pubblica della classe madre Shape.
+class Geometry::Polygon : public Shape	// Eredita la componente pubblica della classe madre Shape.
 {
 	private:
 		;

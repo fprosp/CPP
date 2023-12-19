@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:40:05 by fprosper          #+#    #+#             */
-/*   Updated: 2023/12/19 11:22:39 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/12/19 19:08:18 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,22 @@
 
 #include <string>
 #include <iostream>
+
 class	ClapTrap
 {
 	private:
-		std::string _Name;
-		int 		_Hit_points;
-		int			_Energy_points;
-		int			_Attack_damage;
+		std::string _name;
+		int 		_hitPoints;
+		int			_energyPoints;
+		int			_attackDamage;
+	
 	public:
-		ClapTrap(std::string Name);				// Default constructor 
-		~ClapTrap();							// Default destructor
-		
+		ClapTrap();											// Default constructor 
+		ClapTrap(std::string Name);							// Custom costructor
+		~ClapTrap();										// Default destructor
+		ClapTrap(const ClapTrap &className);				// Copy constructor
+		ClapTrap &operator=(const ClapTrap &className);		// Copy Assignment overload
+
 		void 	attack(const std::string &target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);

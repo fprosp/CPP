@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:14:53 by arecce            #+#    #+#             */
-/*   Updated: 2023/12/15 16:13:24 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/12/19 18:50:20 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ class Fixed
 
 	public:
 
-		Fixed();
-		Fixed(const int value);
-		Fixed(const float value);
+		Fixed();								// Default costructor
+		Fixed(const int value);					// Custom costructor
+		Fixed(const float value);				// Custom costructor
+		Fixed(const Fixed &original); 			// Copy Constructor
+		Fixed &operator=(const Fixed &assign); 	// Copy Assignment
 		~Fixed();
-		Fixed(const Fixed &original); // Copy Constructor
 		
-		Fixed &operator=(const Fixed &assign); // Copy Assignment
 
 		bool	operator>(const Fixed& other) const;
 		bool	operator<(const Fixed& other) const;

@@ -22,16 +22,13 @@ class   Fixed
         static const int _fractional = 8;
     
     public:
+        Fixed();                                   // Default costructor
+        ~Fixed();                                  // Default destructor
+        Fixed(const Fixed &class_name);            // Copy constructor
+		Fixed &operator=(const Fixed &class_name); // Copy assignment
+
         int		getRawBits() const;
-		void	setRawBits(int const raw);         
-        Fixed();                                   // Costructor
-        Fixed(const Fixed &class_name);            // Copy Constructor
-		Fixed &operator=(const Fixed &class_name); // Copy Assignment 
-        ~Fixed();                                  // Destructor
-
-
-
-
+		void	setRawBits(int const raw);     
 };
 
 #endif

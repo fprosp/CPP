@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:36:21 by fprosper          #+#    #+#             */
-/*   Updated: 2023/12/19 12:54:34 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/12/19 19:45:56 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main(void)
 {
+	
 	ClapTrap Hitler("Hitler");
 	ClapTrap Stalin("Stalin");
 

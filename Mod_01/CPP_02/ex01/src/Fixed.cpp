@@ -6,7 +6,7 @@
 /*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 16:12:57 by fprosper          #+#    #+#             */
-/*   Updated: 2023/12/15 16:12:59 by fprosper         ###   ########.fr       */
+/*   Updated: 2023/12/19 19:00:58 by fprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fixed::Fixed(const int value)
     FixNum = value << Fixed::Bits;
 }
 
-Fixed::Fixed(const float value)
+Fixed::Fixed(const float value)            
 {
     std::cout << "Float constructor called" << std::endl;
     FixNum = roundf(value * (1 << Fixed::Bits));
