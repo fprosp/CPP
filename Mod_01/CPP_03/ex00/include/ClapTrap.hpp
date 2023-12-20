@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+
 class	ClapTrap
 {
 	protected:

@@ -1,5 +1,5 @@
-NAME			=	FragTrap
-SRC 			= 	main.cpp ./src/Animals.cpp ./src/Cat.cpp ./src/Dog.cpp 
+NAME			=	Animal
+SRC 			= 	main.cpp ./src/Animal.cpp ./src/Cat.cpp ./src/Dog.cpp 
 OBJS 			= 	$(SRC:.cpp=.o)
 
 CC				=	c++

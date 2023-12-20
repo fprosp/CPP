@@ -16,7 +16,6 @@ class FragTrap:public ClapTrap
 		FragTrap &operator=(const FragTrap &className);	// Copy assigment overload operator
 
 		void 	highFivesGuys(void);
-
 };
 
 

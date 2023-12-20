@@ -2,33 +2,33 @@
 
 ScavTrap::ScavTrap():ClapTrap()   
 {
-    std::cout << "Default ScavTrap constructor of " << _name << ", called." << std::endl; 
     _name = "Scavvy";
     _hitPoints = 100;
     _energyPoints = 50;
     _attackDamage = 20;
+    std::cout << "Default ScavTrap constructor of object " << _name << ", called." << std::endl; 
 }
 
 ScavTrap::ScavTrap(std::string name):ClapTrap(name)
 {
-    std::cout << "Custom ScavTrap constructor of " << _name << ", called." << std::endl; 
     _name = name;
     _hitPoints = 100;
     _energyPoints = 50;
     _attackDamage = 20;
+    std::cout << "Custom ScavTrap constructor of object " << _name << ", called." << std::endl; 
 }
 
 ScavTrap::~ScavTrap()																		
 {
-	std::cout << "Default ScavTrap destructor of  " << _name << ", called." << std::endl;
+	std::cout << "Default ScavTrap destructor of object " << _name << ", called." << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &className):ClapTrap()
 {
-	std::cout << "ScavTrap copy constructor called" << std::endl;
     _hitPoints = className._hitPoints;
     _attackDamage = className._attackDamage;
     _energyPoints = className._energyPoints;
+	std::cout << "ScavTrap copy constructor called" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &className)											
@@ -38,6 +38,19 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &className)
 	this->_energyPoints = className._energyPoints;
 	this->_attackDamage = className._attackDamage;
 	return (*this);
+}
+
+void	ScavTrap::attack(const std::string &targhet)
+{
+	if (_hitPoints == 0 || _energyPoints == 0)
+		std::cout << "ScavTrap has no 'hitPoints' or no 'energyPoints' so " << _name << " can't attak " << std::endl;
+	else
+	{
+		std::cout << "ScavTrap " << _name << " attacks " << targhet << " causing " << _attackDamage << " attackDamage points! " << std::endl;
+		_energyPoints--;
+		std::cout << "Now the striker " << _name << " has got; " << _energyPoints << " 'energyPoints' " << std::endl; 
+	} 
+	return ;
 }
 
 void	ScavTrap::guardGate()

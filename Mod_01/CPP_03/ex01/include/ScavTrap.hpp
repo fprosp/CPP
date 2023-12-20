@@ -3,7 +3,10 @@
 
 #include "ClapTrap.hpp"
 class ScavTrap:public ClapTrap
-{        
+{
+    private:
+        ;
+
     public:
         ScavTrap();                                         // Default costructor
         ScavTrap(std::string name);                         // Custom costructor
@@ -11,7 +14,8 @@ class ScavTrap:public ClapTrap
         ScavTrap(const ScavTrap &className);				// Copy constructor
 		ScavTrap &operator=(const ScavTrap &className);		// Copy Assignment operator overload 
     
-        void guardGate();
+        void    attack(const std::string &targhet);
+        void    guardGate();
 };
 
 #endif

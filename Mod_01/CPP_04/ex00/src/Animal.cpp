@@ -24,7 +24,12 @@ Animal &Animal::operator=(const Animal &className)
 	return (*this);
 }
 
-void	Animal::makeSound()
+void	Animal::makeSound()	const
 {
 	std::cout << _type + " makes loud noises." << std::endl;
+}
+
+std::string		Animal::getType(void)	const
+{
+	return (this->_type);
 }

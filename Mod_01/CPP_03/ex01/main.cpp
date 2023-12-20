@@ -3,20 +3,25 @@
 
 int	main(void)
 {
-	ClapTrap trap1("Clappy");
-	ScavTrap scav1;
-	ScavTrap scav2("Scavvy");
-	
-	trap1.attack("Jack");
-	scav1.attack("Jack");
-	scav2.attack("Jack");
-	scav1.takeDamage(30);
-	scav2.takeDamage(30);
-	for (int i = 0; i < 50; i++)
-		scav2.guardGate();
-	scav1.takeDamage(75);
-	scav1.attack("Jack");
-	scav1.guardGate();
-		
+	ClapTrap Hitler("Hitler");
+	ScavTrap Himler("Himler");
+	ClapTrap Stalin("Stalin");
+	ClapTrap Churchill("Churchill");
+	ClapTrap Roosevelt("Roosevelt");
+
+	Hitler.takeDamage(50);
+	Hitler.attack("Churchill");
+	Himler.attack("Churchill");
+	Hitler.attack("Stalin");
+	Himler.attack("Stalin");
+	Stalin.takeDamage(500);
+	Churchill.takeDamage(500);
+	Roosevelt.takeDamage(500);
+	Stalin.attack("Hitler");
+	Stalin.attack("Himler");
+	Roosevelt.attack("Hitler");
+	Churchill.attack("Himler");
+	Hitler.attack("himself");
+	Himler.attack("himself");
 	return (0);
 }

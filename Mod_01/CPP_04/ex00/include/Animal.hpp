@@ -14,9 +14,10 @@ class Animal
 		Animal(std::string verso);						  	// Custom custructor
 		~Animal();											// Default destructor
 		Animal(const Animal &className);					// Copy constructor
-		Animal &operator=(const Animal &className);		// Copy Assignment operator overload 
+		Animal &operator=(const Animal &className);			// Copy Assignment operator overload 
 		
-		void 	makeSound();
+		void 	makeSound()	const;
+		std::string		getType() const;
 };
 
 #endif

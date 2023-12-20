@@ -2,25 +2,25 @@
 
 ClapTrap::ClapTrap()			
 {
-	std::cout << "Default ClapTrap constructor of " << _name << ", called." << std::endl;
 	_name = "Clappy";	
 	_hitPoints = 10;
 	_energyPoints = 10;
 	_attackDamage = 0;
+	std::cout << "Default ClapTrap constructor of object " << _name << ", called." << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "Custom ClapTrap constructor of " << _name << ", called." << std::endl;
 	_name = name;	
 	_hitPoints = 10;
 	_energyPoints = 10;
 	_attackDamage = 0;
+	std::cout << "Custom ClapTrap constructor of object " << _name << ", called." << std::endl;
 }
 
 ClapTrap::~ClapTrap()																				
 {
-	std::cout << "Default ClapTrap destructor of  " << _name << ", called." << std::endl;
+	std::cout << "Default ClapTrap destructor of object" << _name << ", called." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &className) 						

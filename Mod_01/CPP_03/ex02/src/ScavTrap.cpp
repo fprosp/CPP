@@ -2,25 +2,25 @@
 
 ScavTrap::ScavTrap():ClapTrap()   
 {
-    std::cout << "Default ScavTrap constructor of " << _name << ", called." << std::endl; 
     _name = "Scavvy";
     _hitPoints = 100;
     _energyPoints = 50;
     _attackDamage = 20;
+    std::cout << "Default ScavTrap constructor of object " << _name << ", called." << std::endl; 
 }
 
 ScavTrap::ScavTrap(std::string name):ClapTrap(name)
 {
-    std::cout << "Custom ScavTrap constructor of " << _name << ", called." << std::endl; 
     _name = name;
     _hitPoints = 100;
     _energyPoints = 50;
     _attackDamage = 20;
+    std::cout << "Custom ScavTrap constructor of object " << _name << ", called." << std::endl; 
 }
 
 ScavTrap::~ScavTrap()																		
 {
-	std::cout << "Default ScavTrap destructor of  " << _name << ", called." << std::endl;
+	std::cout << "Default ScavTrap destructor of object " << _name << ", called." << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &className):ClapTrap()

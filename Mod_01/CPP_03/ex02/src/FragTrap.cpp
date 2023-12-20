@@ -2,25 +2,25 @@
 
 FragTrap::FragTrap():ClapTrap()   
 {
-    std::cout << "Default FragTrap constructor of " << _name << ", called." << std::endl; 
     _name = "Fraggy";
     _hitPoints = 100;
     _energyPoints = 50;
     _attackDamage = 20;
+    std::cout << "Default FragTrap constructor of object " << _name << ", called." << std::endl; 
 }
 
 FragTrap::FragTrap(std::string name):ClapTrap(name)
 {
-    std::cout << "Custom FragTrap constructor of " << _name << ", called." << std::endl; 
     _name = name;
     _hitPoints = 100;
     _energyPoints = 50;
     _attackDamage = 20;
+    std::cout << "Custom FragTrap constructor of object " << _name << ", called." << std::endl; 
 }
 
 FragTrap::~FragTrap()																		
 {
-	std::cout << "Default FragTrap destructor of  " << _name << ", called." << std::endl;
+	std::cout << "Default FragTrap destructor of object " << _name << ", called." << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &className):ClapTrap()
