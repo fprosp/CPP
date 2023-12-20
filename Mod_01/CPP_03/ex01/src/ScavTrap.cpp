@@ -25,7 +25,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap::ScavTrap(const ScavTrap &className):ClapTrap()
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ScavTrap copy constructor called" << std::endl;
     _hitPoints = className._hitPoints;
     _attackDamage = className._attackDamage;
     _energyPoints = className._energyPoints;
@@ -33,7 +33,7 @@ ScavTrap::ScavTrap(const ScavTrap &className):ClapTrap()
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &className)											
 {
-	std::cout << "Copy assigment operator overload called." << std::endl;
+	std::cout << "ScavTrap copy assigment operator overload called." << std::endl;
 	this->_hitPoints = className._hitPoints;
 	this->_energyPoints = className._energyPoints;
 	this->_attackDamage = className._attackDamage;
