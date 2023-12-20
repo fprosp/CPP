@@ -1,44 +1,43 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/18 11:59:56 by fprosper          #+#    #+#             */
-/*   Updated: 2023/12/19 19:53:58 by fprosper         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../include/ClapTrap.hpp"
 
-ClapTrap::ClapTrap():_name("Clappy"),_hitPoints(10),_energyPoints(10),_attackDamage(0)	// Default costructor
+ClapTrap::ClapTrap()			
 {
-	std::cout << "Default constructor of " << _name << " called." << std::endl; 
+	std::cout << "Default ClapTrap constructor of " << _name << ", called." << std::endl;
+	_name = "Clappy";	
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
 }
 
-ClapTrap::ClapTrap(std::string name):_name(name),_hitPoints(10),_energyPoints(10),_attackDamage(0)	// Custom costructor
+ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "Custom constructor of " << _name << " called." << std::endl; 
+	std::cout << "Custom ClapTrap constructor of " << _name << ", called." << std::endl;
+	_name = name;	
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
 }
 
-ClapTrap::~ClapTrap()	// Default destructor
+ClapTrap::~ClapTrap()																				
 {
-	std::cout << "Default destructor of  " << _name << " called." << std::endl;
+	std::cout << "Default ClapTrap destructor of  " << _name << ", called." << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &className):_hitPoints(className._hitPoints), \
-_attackDamage(className._attackDamage), _energyPoints(className._energyPoints) 	// Copy costructor
+ClapTrap::ClapTrap(const ClapTrap &className) 						
 {
-	std::cout << "Copy constructor called" << std::endl;
-}
-
-ClapTrap &ClapTrap::operator=(const ClapTrap &className)	// Copy Assignment operator overload 
-{
-	std::cout << " Copy Assignment operator overload called." << std::endl;
+	std::cout << "ClapTrap copy constructor, called" << std::endl;
 	_hitPoints = className._hitPoints;
 	_energyPoints = className._energyPoints;
 	_attackDamage = className._attackDamage;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &className)											
+{
+	std::cout << "ClapTrap copy assigment operator overload, called." << std::endl;
+	this->_hitPoints = className._hitPoints;
+	this->_energyPoints = className._energyPoints;
+	this->_attackDamage = className._attackDamage;
+	return (*this);
 }
 
 void	ClapTrap::attack(const std::string &targhet)

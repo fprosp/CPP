@@ -1,33 +1,22 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/18 16:36:21 by fprosper          #+#    #+#             */
-/*   Updated: 2023/12/19 12:54:34 by fprosper         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "./include/ClapTrap.hpp"
+#include "./include/ScavTrap.hpp"
 
-int main(void)
+int	main(void)
 {
-	ClapTrap Hitler("Hitler");
-	ClapTrap Stalin("Stalin");
-
-	Hitler.attack("Stalin");
-	Hitler.takeDamage(5);
-	for (int i = 0; i < 5; i++)
-		Hitler.beRepaired(5);
-	Hitler.takeDamage(30);
-	Hitler.attack("Stalin");
-	Hitler.beRepaired(5);
-	Hitler.takeDamage(20);
-	Hitler.beRepaired(5);
-	Hitler.attack("Stalin");
-	Hitler.takeDamage(500);
-	Stalin.attack("itself");
+	ClapTrap trap1("Clappy");
+	ScavTrap scav1;
+	ScavTrap scav2("Scavvy");
+	
+	trap1.attack("Jack");
+	scav1.attack("Jack");
+	scav2.attack("Jack");
+	scav1.takeDamage(30);
+	scav2.takeDamage(30);
+	for (int i = 0; i < 50; i++)
+		scav2.guardGate();
+	scav1.takeDamage(75);
+	scav1.attack("Jack");
+	scav1.guardGate();
+		
 	return (0);
 }

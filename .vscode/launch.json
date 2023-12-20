@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/fprosper/Desktop/CPP/Mod_01/CPP_02/ex01/src",
-      "program": "/Users/fprosper/Desktop/CPP/Mod_01/CPP_02/ex01/src/build/Debug/outDebug"
+      "cwd": "/Users/fprosper/Desktop/CPP/CPP_help/C03/ex01/src",
+      "program": "/Users/fprosper/Desktop/CPP/CPP_help/C03/ex01/src/build/Debug/outDebug"
     }
   ]
 }

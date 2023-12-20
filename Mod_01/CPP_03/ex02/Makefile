@@ -6,12 +6,12 @@
 #    By: fprosper <fprosper@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/15 16:09:49 by fprosper          #+#    #+#              #
-#    Updated: 2023/12/20 12:41:26 by fprosper         ###   ########.fr        #
+#    Updated: 2023/12/20 12:41:15 by fprosper         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	ScavTrap
-SRC 			= 	main.cpp ./src/ClapTrap.cpp ./src/ScavTrap.cpp
+NAME			=	FragTrap
+SRC 			= 	main.cpp ./src/ClapTrap.cpp ./src/ScavTrap.cpp ./src/FragTrap.cpp 
 OBJS 			= 	$(SRC:.cpp=.o)
 
 CC				=	c++
