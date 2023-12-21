@@ -1,5 +1,4 @@
 #include "../includes/Dog.hpp"
-#include <iostream>
 
 Dog::Dog()
 {
@@ -10,7 +9,6 @@ Dog::Dog()
 Dog::~Dog()
 {
 	std::cout << "I am a Dog destructor." << std::endl;
-
 }
 
 Dog::Dog(const Dog &original)

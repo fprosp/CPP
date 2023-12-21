@@ -2,14 +2,9 @@
 # define SCAVTRAP_HPP
 
 #include "ClapTrap.hpp"
+
 class ScavTrap:public ClapTrap
 {       
-  private:
-    ;
-
-  	protected:
-		;
-
   public:
     ScavTrap();                                         // Default costructor
     ScavTrap(std::string name);                         // Custom costructor

@@ -20,7 +20,7 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::~ClapTrap()																				
 {
-	std::cout << "Default ClapTrap destructor of object" << _name << ", called." << std::endl;
+	std::cout << "Default ClapTrap destructor of object " << _name << ", called." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &className) 						

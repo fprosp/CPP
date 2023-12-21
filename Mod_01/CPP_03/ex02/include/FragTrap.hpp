@@ -2,14 +2,9 @@
 # define FRAGTRAP_HPP
 
 #include "ClapTrap.hpp"
+
 class FragTrap:public ClapTrap
 {
-	private:
-		;
-
-	protected:
-		;
-
 	public:
 		FragTrap();										// Default csotructor
 		FragTrap(std::string name);						// Custom costructor

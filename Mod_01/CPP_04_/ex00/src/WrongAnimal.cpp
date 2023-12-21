@@ -1,5 +1,4 @@
 #include "../includes/WrongAnimal.hpp"
-#include <iostream>
 
 WrongAnimal::WrongAnimal()
 {
@@ -10,7 +9,6 @@ WrongAnimal::WrongAnimal()
 WrongAnimal::~WrongAnimal()
 {
 	std::cout << "I am a WrongAnimal destructor." << std::endl;
-
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &original)

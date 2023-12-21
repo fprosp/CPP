@@ -30,7 +30,12 @@ Cat &Cat::operator=(const Cat &className)
 	return (*this);
 }
 
-void	Cat::makeSound() const
+void	Cat::setIdeas(std::string str, int i) const
 {
-	std::cout << "The" << _type << " meows." << std::endl;
+	_brain->_ideas[i] = str;
+}
+
+std::string	Cat::getIdea(int i) const
+{
+	return (_brain->_ideas[i]);
 }

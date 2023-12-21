@@ -9,7 +9,6 @@ WrongCat::WrongCat()
 WrongCat::~WrongCat()
 {
 	std::cout << "I am a WrongCat destructor." << std::endl;
-
 }
 
 WrongCat::WrongCat(const WrongCat &original)

@@ -1,5 +1,4 @@
 #include "../includes/Animal.hpp"
-#include <iostream>
 
 Animal::Animal()
 {
@@ -10,7 +9,6 @@ Animal::Animal()
 Animal::~Animal()
 {
 	std::cout << "I am an Animal destructor." << std::endl;
-
 }
 
 Animal::Animal(const Animal &original)

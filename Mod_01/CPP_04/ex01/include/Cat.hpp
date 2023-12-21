@@ -2,11 +2,12 @@
 # define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat:public Animal
 {
-	protected:
-		;
+	private:
+		Brain *_brain;
 
 	public:
 		Cat();										// Default costructor
@@ -15,7 +16,9 @@ class Cat:public Animal
 		Cat(const Cat &className);					// Copy constructor
 		Cat &operator=(const Cat &className);		// Copy Assignment operator overload 
 
-		void	makeSound() const;
+		void		setIdeas(std::string str, int i) const;
+		std::string	getIdea(int i) const;
+
 };
 
 #endif

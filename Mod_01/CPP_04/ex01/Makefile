@@ -1,6 +1,6 @@
 NAME			=	Animal
 SRC 			= 	main.cpp ./src/Animal.cpp ./src/Cat.cpp ./src/Dog.cpp \
-					./src/WrongAnimal.cpp ./src/WrongCat.cpp
+					./src/WrongAnimal.cpp ./src/WrongCat.cpp ./src/Brain.cpp
 OBJS 			= 	$(SRC:.cpp=.o)
 
 CC				=	c++

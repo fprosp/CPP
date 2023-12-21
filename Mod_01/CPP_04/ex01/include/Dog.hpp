@@ -2,11 +2,12 @@
 # define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog:public Animal
 {
-	protected:
-		;
+	private:
+		Brain *_brain;
 
 	public:
 		Dog();										// Default costructor

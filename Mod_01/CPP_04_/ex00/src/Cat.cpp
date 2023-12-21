@@ -1,5 +1,4 @@
 #include "../includes/Cat.hpp"
-#include <iostream>
 
 Cat::Cat()
 {
@@ -10,7 +9,6 @@ Cat::Cat()
 Cat::~Cat()
 {
 	std::cout << "I am a Cat destructor." << std::endl;
-
 }
 
 Cat::Cat(const Cat &original)
