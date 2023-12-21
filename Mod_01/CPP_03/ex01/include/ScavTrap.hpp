@@ -2,7 +2,7 @@
 # define SCAVTRAP_HPP
 
 #include "ClapTrap.hpp"
-class ScavTrap:public ClapTrap
+class ScavTrap:public ClapTrap  // Eredita la componente pubblica di CLapTrap e la include nella classe ScavTrap.
 {
     private:
         ;

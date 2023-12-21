@@ -72,3 +72,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	return ;
 }
 
+std::string ClapTrap::getName()
+{
+	return (_name);
+}

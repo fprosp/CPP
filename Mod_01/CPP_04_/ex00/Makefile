@@ -1,5 +1,6 @@
-NAME			=	ClapTrap
-SRC 			= 	main.cpp ./src/ClapTrap.cpp
+NAME			=	Animal
+SRC 			= 	main.cpp ./src/Animal.cpp ./src/Cat.cpp ./src/Dog.cpp \
+					./src/WrongAnimal.cpp ./src/WrongCat.cpp
 OBJS 			= 	$(SRC:.cpp=.o)
 
 CC				=	c++

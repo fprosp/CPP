@@ -23,5 +23,6 @@ int	main(void)
 	Churchill.attack("Himler");
 	Hitler.attack("himself");
 	Himler.attack("himself");
+	std::cout << Stalin.getName() << " , " << Roosevelt.getName() << " and " << Churchill.getName() << " won the war" << std::endl;
 	return (0);
 }

@@ -2,10 +2,12 @@
 # define FRAGTRAP_HPP
 
 #include "ClapTrap.hpp"
-
 class FragTrap:public ClapTrap
 {
 	private:
+		;
+
+	protected:
 		;
 
 	public:
@@ -17,10 +19,5 @@ class FragTrap:public ClapTrap
 
 		void 	highFivesGuys(void);
 };
-
-
-
-
-
 
 #endif

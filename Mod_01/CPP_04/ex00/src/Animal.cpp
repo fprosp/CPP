@@ -3,7 +3,13 @@
 Animal::Animal()
 {
 	std::cout << "Default 'Animal' class costructor call" << std::endl;
-	_type = "Tipo di animale";
+	_type = " animale" ;
+}
+
+Animal::Animal(std::string type)
+{
+	std::cout << "Default 'Animal' class costructor call" << std::endl;
+	_type = type;
 }
 
 Animal::~Animal()

@@ -3,7 +3,6 @@
 
 #include <string>
 #include <iostream>
-
 class Animal
 {
 	protected:
@@ -11,7 +10,7 @@ class Animal
 
 	public:
 		Animal();											// Default costructor
-		Animal(std::string verso);						  	// Custom custructor
+		Animal(std::string type);						  	// Custom custructor
 		~Animal();											// Default destructor
 		Animal(const Animal &className);					// Copy constructor
 		Animal &operator=(const Animal &className);			// Copy Assignment operator overload 

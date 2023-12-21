@@ -19,10 +19,10 @@ class	ClapTrap
 		ClapTrap(const ClapTrap &className);				// Copy constructor
 		ClapTrap &operator=(const ClapTrap &className);		// Copy Assignment operator overload 
 
-		void 	attack(const std::string &target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
-
+		void 		attack(const std::string &target);
+		void		takeDamage(unsigned int amount);
+		void		beRepaired(unsigned int amount);
+		std::string getName();
 };
 
 #endif
