@@ -1,4 +1,4 @@
-NAME			=	Animal
+NAME			=	Bureaucrat
 SRC 			= 	main.cpp ./src/Bureaucrat.cpp
 OBJS 			= 	$(SRC:.cpp=.o)
 

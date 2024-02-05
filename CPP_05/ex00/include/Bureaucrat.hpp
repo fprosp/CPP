@@ -21,26 +21,25 @@ class Bureaucrat
 		void		decrementGrade();
 		class GradeTooHighException : public std::exception
 		{
-			private:
-				std::string		_message;
 			public:
-				GradeTooHighException(std::string msg) : _message(msg) {} 
-				std::string	what()										 
+				virtual const char *what() const throw()
 				{
-					return (_message);
+					return ("Grade too high. The Bureaucrat could have 1 or lower point.");
 				}
 		};
 		class GradeTooLowException : public std::exception
 		{
-			private:
-				std::string		_message;
 			public:
-				GradeTooLowException(std::string msg) : _message(msg) {}
-				std::string	what()
+				virtual const char *what() const throw()
 				{
-					return (_message);
+					return ("Grade too low. The Bureaucrat could have a level 150 or upper");
 				}
 		};
 };
+
+
+
+
+std::ostream &operator <<(std::ostream &os, const Bureaucrat &obj);
 
 #endif

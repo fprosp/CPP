@@ -1,31 +1,30 @@
 #include "../include/Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat()
+Bureaucrat::Bureaucrat():_name("Francesco")
 {
-	std::cout << "Defautl costructor call" << std::endl;
+	_grade = 150;
+	std::cout << getName() << "has been hired." << std::endl;
 }
 
 Bureaucrat::Bureaucrat(std::string const name, int grade):_name(name)
 {
-	std::cout << "Custom costructor call" << std::endl;
 	if (grade < 1)
-		throw GradeTooHighException("Grade must be upper to 1 ");
-	if (grade > 150)
-		throw GradeTooHighException("Grade must be less to 150");
+		throw GradeTooHighException();
+	else if (grade > 150)
+		throw GradeTooHighException();
 	_grade = grade;
-	std::cout << getName() << "has been hired " << std::endl;
+	std::cout << getName() << " has been hired with grade: " << getGrade() << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &className):_name(className._name)
+Bureaucrat::Bureaucrat(const Bureaucrat &className):_name(className._name), _grade(className._grade) 
 {
 	std::cout << "Copy constructor call" << std::endl;
 	_grade = className._grade;
 }
 
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat &className)
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &className) 
 {
 	std::cout << "Copy assigment operator overload called." << std::endl;
-	_grade = className._grade;
 	return (*this);
 }
 
@@ -47,21 +46,21 @@ int 	Bureaucrat::getGrade() const
 void	Bureaucrat::incrementGrade()
 {
 	if (_grade == 1)
-		throw GradeTooHighException("1 is the highest possible grade.");
+		throw GradeTooHighException();
 	_grade--;
-	std::cout << getName() << " new grade is " << getGrade() << std::endl;
+	std::cout << getName() << " has been promoted to grade: " << getGrade() << std::endl;
 }
 
 void	Bureaucrat::decrementGrade()
 {
 	if (_grade == 150)
-		throw GradeTooLowException("150 is the lowest possible grade.");
+		throw GradeTooLowException();
 	_grade++;
-	std::cout << getName() << " new grade is " << getGrade() << std::endl;
+	std::cout << getName() << " has been relegated to grade: " << getGrade() << std::endl;
 }
 
 std::ostream &operator <<(std::ostream &os, const Bureaucrat &obj)
 {
-    os << obj.getName() << ", bureacrat grade " << obj.getGrade();
+    os << obj.getName() << ", bureacrat grade is: " << obj.getGrade();
     return (os);
 }
