@@ -21,18 +21,26 @@ class Bureaucrat
 		void		decrementGrade();
 		class GradeTooHighException : public std::exception
 		{
+			private:
+				std::string		_message;
 			public:
-				virtual const char *what() const throw()
-				{
-					return ("Grade too high. The Bureaucrat could have 1 or lower point.");
+				GradeTooHighException(std::string msg) : _message(msg) {}
+				~GradeTooHighException() _NOEXCEPT {};
+				const std::string	what()
+				{	
+					return (_message);
 				}
 		};
 		class GradeTooLowException : public std::exception
 		{
+			private:
+				std::string		_message;
 			public:
-				virtual const char *what() const throw()
+				GradeTooLowException(std::string msg) : _message(msg) {}
+				~GradeTooLowException() _NOEXCEPT {};
+				std::string	what()
 				{
-					return ("Grade too low. The Bureaucrat could have a level 150 or upper");
+					return (_message);
 				}
 		};
 };

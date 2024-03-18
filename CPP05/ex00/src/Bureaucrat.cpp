@@ -9,9 +9,9 @@ Bureaucrat::Bureaucrat():_name("Francesco")
 Bureaucrat::Bureaucrat(std::string const name, int grade):_name(name)
 {
 	if (grade < 1)
-		throw GradeTooHighException();
+		throw GradeTooHighException("Grade cannot be major than 1.");
 	else if (grade > 150)
-		throw GradeTooHighException();
+		throw GradeTooHighException("Grade cannot be minor than 150.");
 	_grade = grade;
 	std::cout << getName() << " has been hired with grade: " << getGrade() << std::endl;
 }
@@ -45,16 +45,17 @@ int 	Bureaucrat::getGrade() const
 
 void	Bureaucrat::incrementGrade()
 {
-	if (_grade == 1)
-		throw GradeTooHighException();
+	if (_grade <= 1)
+		throw GradeTooHighException("Cannot increment a bureacrat's grade above 1.");
 	_grade--;
 	std::cout << getName() << " has been promoted to grade: " << getGrade() << std::endl;
+	return ;
 }
 
 void	Bureaucrat::decrementGrade()
 {
-	if (_grade == 150)
-		throw GradeTooLowException();
+	if (_grade >= 150)
+		throw GradeTooLowException("Cannot decrement a bureacrat's grade below 150.");
 	_grade++;
 	std::cout << getName() << " has been relegated to grade: " << getGrade() << std::endl;
 }

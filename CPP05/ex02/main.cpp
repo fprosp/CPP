@@ -1,40 +1,38 @@
 #include "./include/Bureaucrat.hpp"
+#include "./include/AForm.hpp"
+#include "./include/PresidentialPardonForm.hpp"
 
 int main()
 {
 	try 
 	{
-		Form	modulo1("Fusione", 50, 10);
-	 	std::cout << modulo1 << std::endl;
-		std::cout << std::endl;
+		PresidentialPardonForm	modulo1("Fusione", 50, 10);
+	 	// std::cout << modulo1 << std::endl;
 
-		Form 	modulo2("Accordo commerciale", 100, 50);
-	 	std::cout << modulo2 << std::endl;
-		std::cout << std::endl;
+		// PresidentialPardonForm 	modulo2("Accordo commerciale", 100, 50);
+	 	// std::cout << modulo2 << std::endl << std::endl;
 
-		Bureaucrat boss("Amministratore delegato", 1);
-		std::cout << boss << std::endl << std::endl;
-		Bureaucrat operatore1("Risorsa_amministrazione", 50);
-		std::cout << operatore1 << std::endl << std::endl;;
-		Bureaucrat operatore2("impiegato", 100);
-		std::cout << operatore2 << std::endl << std::endl;;
-		
+		Bureaucrat boss("Amministratore delegato", 0);
+		// std::cout << boss << std::endl;
+
 		modulo1.beSigned(boss);					// Puo firmare ed eseguire, ed è fimato
-		boss.signForm(modulo1);
-		modulo2.beSigned(operatore2);
-		operatore2.signForm(modulo2);
-		std::cout << std::endl;
-		modulo1.beSigned(operatore1); 			// Puo firmare ed ma non eseguire, ma è gia firmato quindi non fa niente 
-		std::cout << std::endl << std::endl;;
-		modulo1.beSigned(operatore2);			// Non puo ne firmare ne eseguire, quindi stampa che non puo farlo a fine blocco TRY, dopo tutti i distruttori
-		std::cout << std::endl << std::endl;;
-		std::cout << std::endl << std::endl;;
+		boss.signForm(modulo1);					// Puo firmare ed ma non eseguire, ma è gia firmato quindi non fa niente 
+		modulo1.execute(boss);
+
 	}
-	catch (Form::GradeTooHighException e) 
+	catch (AForm::GradeTooHighException e) 
 	{
 		std::cout << e.what() << std::endl;
 	}
-	catch (Form::GradeTooLowException e) 
+	catch (AForm::GradeTooLowException e) 
+	{
+		std::cout << e.what() << std::endl;
+	}
+	catch (Bureaucrat::GradeTooHighException e) 
+	{
+		std::cout << e.what() << std::endl;
+	}
+	catch (Bureaucrat::GradeTooLowException e) 
 	{
 		std::cout << e.what() << std::endl;
 	}

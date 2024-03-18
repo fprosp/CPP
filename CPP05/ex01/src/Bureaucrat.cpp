@@ -45,7 +45,7 @@ int 	Bureaucrat::getGrade() const
 
 void	Bureaucrat::incrementGrade()
 {
-	if (_grade == 1)
+	if (_grade <= 1)
 		throw GradeTooHighException("Cannot increment a bureacrat's grade above 1.");
 	_grade--;
 	std::cout << getName() << " has been promoted to grade: " << getGrade() << std::endl;
@@ -54,7 +54,7 @@ void	Bureaucrat::incrementGrade()
 
 void	Bureaucrat::decrementGrade()
 {
-	if (_grade == 150)
+	if (_grade >= 150)
 		throw GradeTooLowException("Cannot decrement a bureacrat's grade below 150.");
 	_grade++;
 	std::cout << getName() << " has been relegated to grade: " << getGrade() << std::endl;

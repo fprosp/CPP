@@ -1,14 +1,23 @@
-#ifndef ShrubberyCreationForm_hpp
-# define ShrubberyCreationForm_hpp
+#ifndef SHRUBERRYCRATIONFORM_HPP
+# define SHRUBERRYCRATIONFORM_HPP
 
-class ShrubberyCreationForm 
+#include "AForm.hpp"
+
+class AForm;
+
+class ShrubberyCreationForm : public AForm
 {
 	private:
-		int _signGrade;
-		int _executionGrade;
+		std::string _target;
 
 	public:
-};
+		ShrubberyCreationForm();															// Standard costructor	
+		ShrubberyCreationForm(std::string target, int gradeToSign, int gradeToExecute);		// Custom costructor 
+		ShrubberyCreationForm(const ShrubberyCreationForm &original);						// Copy costructor
+		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);				// Assigment operator overload 
+		~ShrubberyCreationForm();															// Destructor	
 
+		void	execute(Bureaucrat const &bureaucratObj) const;
+};
 
 #endif

@@ -1,16 +1,16 @@
-NAME			=	Form
-SRC 			= 	main.cpp ./src/Bureaucrat.cpp ./src/Form.cpp
+NAME			=	meganForm
+SRC 			= 	main.cpp ./src/Bureaucrat.cpp ./src/AForm.cpp ./src/PresidentialPardonForm.cpp ./src/RobotomyRequestForm.cpp \
+					./src/ShrubberyCreationForm.cpp
 OBJS 			= 	$(SRC:.cpp=.o)
 
 CC				=	c++
 RM				=	rm -f
 CFLAGS			=	-Wall -Wextra -Werror -std=c++98
 
+all:			$(NAME)
+
 $(NAME):		$(OBJS)
 				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-
-all:			
-				$(CC) $(CFLAGS) -o $(NAME) $(SRC) $(MAIN)
 
 clean:			
 				$(RM) $(OBJS)

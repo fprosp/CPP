@@ -1,0 +1,23 @@
+NAME			=	internForm
+SRC 			= 	main.cpp ./src/Bureaucrat.cpp ./src/AForm.cpp ./src/PresidentialPardonForm.cpp ./src/RobotomyRequestForm.cpp \
+					./src/ShrubberyCreationForm.cpp ./src/Intern.cpp
+OBJS 			= 	$(SRC:.cpp=.o)
+
+CC				=	c++
+RM				=	rm -f
+CFLAGS			=	-Wall -Wextra -Werror -std=c++98
+
+all:			$(NAME)
+
+$(NAME):		$(OBJS)
+				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+clean:			
+				$(RM) $(OBJS)
+
+fclean:			clean
+				$(RM) $(NAME)
+
+re:				fclean $(NAME)
+
+.PHONY:			all clean fclean re
