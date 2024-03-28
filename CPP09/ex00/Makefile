@@ -1,5 +1,5 @@
-NAME			=	EasyFind
-SRC 			= 	main.cpp
+NAME			=	btc
+SRC 			= 	main.cpp ./src/BitcoinExchange.cpp
 OBJS 			= 	$(SRC:.cpp=.o)
 
 CC				=	c++

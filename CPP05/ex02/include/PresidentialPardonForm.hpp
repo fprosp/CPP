@@ -11,13 +11,13 @@ class PresidentialPardonForm : public AForm
 		std::string _target;
 
 	public:
-		void	execute(Bureaucrat const &bureaucratObj) const;
-		
 		PresidentialPardonForm();															// Standard costructor	
 		PresidentialPardonForm(std::string target, int gradeToSign, int gradeToExecute);	// Custom costructor 
 		PresidentialPardonForm(const PresidentialPardonForm &original);						// Copy costructor
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &otherObj);			// Assigment operator overload 
 		~PresidentialPardonForm();															// Destructor
+		
+		void	execute(Bureaucrat const &bureaucratObj) const;
 };
 
 #endif

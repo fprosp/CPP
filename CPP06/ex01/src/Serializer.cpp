@@ -3,9 +3,6 @@
 Serializer::Serializer()
 {}
 
-Serializer::~Serializer()
-{}
-
 Serializer::Serializer(const Serializer &original)
 {}
 
@@ -13,6 +10,9 @@ Serializer &Serializer::operator=(const Serializer &other)
 {
 	return (*this);
 }
+
+Serializer::~Serializer()
+{}
 
 uintptr_t Serializer::serialize(Data *ptr)
 {

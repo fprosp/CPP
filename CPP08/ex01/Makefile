@@ -1,4 +1,4 @@
-NAME			=	template
+NAME			=	
 SRC 			= 	main.cpp 
 OBJS 			= 	$(SRC:.cpp=.o)
 

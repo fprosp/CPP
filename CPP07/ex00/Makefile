@@ -1,7 +1,7 @@
 NAME			=	template
 SRC 			= 	main.cpp 
 OBJS 			= 	$(SRC:.cpp=.o)
-
+CPP07/ex00/Makefile
 CC				=	c++
 RM				=	rm -f
 CFLAGS			=	-Wall -Wextra -Werror -std=c++98

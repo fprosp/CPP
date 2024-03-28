@@ -23,30 +23,6 @@ ScalarConverter::~ScalarConverter()																	// Destructor
 	std::cout << "ScalarConverter object destruction. " << std::endl;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void	convertToDouble(const std::string &value)
 {
 	if (!isdigit(value[0]))
@@ -94,7 +70,9 @@ void	convertToFloat(const std::string &value)
 int		symCount(const std::string &value, char sym)
 {
 	int	c = 0;
-	for (std::string::size_type i = 0; i < value.length(); i++)
+	std::string::size_type i;
+
+	for (i = 0; i < value.length(); i++)
 		if (value[i] == sym)
 			c++;
 	if (c > 1)
@@ -102,7 +80,7 @@ int		symCount(const std::string &value, char sym)
 	return (1);
 }
 
-int	isDot(const std::string &value)
+int	dotCheck(const std::string &value)
 {
 	if (!symCount(value, '.') || !symCount(value, '+') || !symCount(value, '-'))
 		return (0);
@@ -125,7 +103,7 @@ int	isDot(const std::string &value)
 	return (1);
 }
 
-int		specialCheck(const std::string &value)
+int		specialCharCheck(const std::string &value)
 {
 	if ((!value.compare(0, 3, "nan") && value.length() > 3) || (!value.compare(0, 3, "inf") && value.length() > 3) ||
 		(!value.compare(0, 4, "-inf") && value.length() > 4) || (!value.compare(0, 4, "+inf") && value.length() > 4) ||
@@ -159,7 +137,8 @@ void	convertToInt(const std::string &value)
 	{
 		try
 		{
-			int i = std::stoi(value);
+			int i;
+			i = std::stoi(value);
 			std::cout << "int: " << i << std::endl;
 		}
 		catch (const std::out_of_range& e)
@@ -188,16 +167,16 @@ void	convertToChar(const std::string &value)
 
 void	ScalarConverter::convert(std::string argv)
 {
-	if (!specialCheck(argv))
+	if (!specialCharCheck(argv))
 		return ;
-	if ((argv.length() > 1 && !isdigit(argv[0])) || (isdigit(argv[0]) && !isDot(argv)))
-	{
+	else if ((argv.length() > 1 && !isdigit(argv[0])) || (isdigit(argv[0]) && !dotCheck(argv)))
 		std::cout << "Invalid argument" << std::endl;
-		return ;
+	else 
+	{
+		convertToChar(argv);
+		convertToInt(argv);
+		convertToFloat(argv);
+		convertToDouble(argv);
 	}
-	convertToChar(argv);
-	convertToInt(argv);
-	convertToFloat(argv);
-	convertToDouble(argv);
 	return ;
 }

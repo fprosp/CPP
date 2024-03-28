@@ -1,6 +1,6 @@
 #include "../include/PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm():_target("From_PresidentialPardonForm"), AForm("Default_PresidentialPardonForm", 150, 150)		//Default costructor 
+PresidentialPardonForm::PresidentialPardonForm():_target("Form_PresidentialPardonForm"), AForm("Default_PresidentialPardonForm", 150, 150)		//Default costructor 
 {
 	std::cout << "PresidentialPardonForm form with standard values cration." << std::endl;
 }

@@ -11,18 +11,15 @@
 
 class Serializer
 {
-	private:
-
+	public:
 		Serializer();
 		Serializer(std::string const name, int grade);
 		Serializer(const  Serializer &original);
 		Serializer &operator=(const  Serializer &other);
-
-	public:
+		~Serializer();
 
 		static uintptr_t serialize(Data *ptr);
 		static Data	*deserialize(uintptr_t raw);
-		~Serializer();
 };
 
 
