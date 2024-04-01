@@ -1,5 +1,5 @@
 #ifndef BITCOINEXCHANGE_HPP
-# define BITCOINEXCHANGE_HPP
+#define BITCOINEXCHANGE_HPP
 
 #include <iostream>
 #include <fstream>
@@ -17,6 +17,7 @@ class BitcoinExchange
         std::string                     _file;
     
     public:
+    
         BitcoinExchange();
         BitcoinExchange(std::string file, std::string db);
         ~BitcoinExchange();

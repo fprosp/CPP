@@ -25,7 +25,7 @@ class ScalarConverter
 				std::string		_message;
 			public:
 				InvalidInput(std::string msg) : _message(msg) {}
-				~InvalidInput() _NOEXCEPT {};
+				~InvalidInput() _NOEXCEPT {}; 	// _NOEXCEPT non necessario su linux
 				const std::string	what()
 				{
 					return (_message);
@@ -37,7 +37,7 @@ class ScalarConverter
 				std::string		_message;
 			public:
 				NonDisplayable(std::string msg) : _message(msg) {}
-				~NonDisplayable() _NOEXCEPT {};
+				~NonDisplayable() _NOEXCEPT {}; 	// _NOEXCEPT non necessario su linux
 				const std::string	what()
 				{
 					return (_message);

@@ -1,5 +1,5 @@
-NAME			=	BitcoinExhcange
-SRC 			= 	main.cpp ./src/BitcoinExchange.cpp
+NAME			=	RPN
+SRC 			= 	main.cpp ./src/RPN.cpp
 OBJS 			= 	$(SRC:.cpp=.o)
 
 CC				=	c++
